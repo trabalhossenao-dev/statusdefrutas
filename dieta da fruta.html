@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frutas & Saúde</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fff4;
+      color: #263628;
+    }
+
+    header {
+      background: linear-gradient(135deg, #258b45, #8bc34a);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: #1f6936;
+      padding: 14px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d9ffb8;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 35px 20px 20px;
+    }
+
+    .intro h2 {
+      color: #258b45;
+      margin-bottom: 12px;
+    }
+
+    .pesquisa {
+      display: block;
+      width: 90%;
+      max-width: 450px;
+      margin: 25px auto;
+      padding: 13px;
+      border: 2px solid #a5d6a7;
+      border-radius: 25px;
+      font-size: 16px;
+      outline-color: #258b45;
+    }
+
+    .frutas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      padding: 25px 6%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 4px 14px #00000012;
+      border-bottom: 5px solid #8bc34a;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .emoji {
+      font-size: 65px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #258b45;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .calorias {
+      background: #e8f5e9;
+      color: #216b35;
+      border-radius: 20px;
+      padding: 9px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .card p {
+      line-height: 1.6;
+      margin: 9px 0;
+      font-size: 14px;
+    }
+
+    .card strong {
+      color: #287b3d;
+    }
+
+    .beneficios {
+      background: #eaf7e5;
+      margin: 35px 6%;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .beneficios h2 {
+      color: #258b45;
+      margin-bottom: 18px;
+    }
+
+    .beneficios p {
+      line-height: 1.8;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    footer {
+      background: #1f6936;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      line-height: 1.8;
+    }
+
+    .aviso {
+      color: #526252;
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 20px 25px;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .frutas {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍎 Frutas & Saúde 🍍</h1>
+    <p>Descubra as calorias, os nutrientes e os benefícios das frutas!</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#catalogo">Frutas</a>
+    <a href="#beneficios">Benefícios</a>
+  </nav>
+
+  <section class="intro" id="inicio">
+    <h2>Conheça o poder das frutas!</h2>
+    <p>Frutas são saborosas, nutritivas e podem fazer parte de uma alimentação equilibrada.</p>
+  </section>
+
+  <input
+    type="text"
+    id="pesquisa"
+    class="pesquisa"
+    placeholder="🔎 Pesquise uma fruta..."
+    aria-label="Pesquisar frutas"
+  >
+
+  <main class="frutas" id="catalogo">
+
+    <article class="card" data-nome="banana">
+      <div class="emoji">🍌</div>
+      <h3>Banana</h3>
+      <div class="calorias">89 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> potássio, vitamina B6 e fibras.</p>
+      <p><strong>Benefícios:</strong> contribui para a função muscular, o funcionamento dos nervos e a saúde intestinal.</p>
+    </article>
+
+    <article class="card" data-nome="maca maçã">
+      <div class="emoji">🍎</div>
+      <h3>Maçã</h3>
+      <div class="calorias">52 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> fibras e compostos antioxidantes.</p>
+      <p><strong>Benefícios:</strong> ajuda no funcionamento do intestino e contribui para a saciedade.</p>
+    </article>
+
+    <article class="card" data-nome="laranja">
+      <div class="emoji">🍊</div>
+      <h3>Laranja</h3>
+      <div class="calorias">47 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitamina C, folato e fibras.</p>
+      <p><strong>Benefícios:</strong> auxilia o funcionamento do sistema imunológico e a absorção do ferro dos alimentos.</p>
+    </article>
+
+    <article class="card" data-nome="morango">
+      <div class="emoji">🍓</div>
+      <h3>Morango</h3>
+      <div class="calorias">32 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitamina C, fibras e antioxidantes.</p>
+      <p><strong>Benefícios:</strong> contribui para a saúde da pele, a imunidade e a proteção das células.</p>
+    </article>
+
+    <article class="card" data-nome="uva">
+      <div class="emoji">🍇</div>
+      <h3>Uva</h3>
+      <div class="calorias">69 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> carboidratos, água e polifenóis.</p>
+      <p><strong>Benefícios:</strong> fornece energia e compostos antioxidantes que ajudam a proteger as células.</p>
+    </article>
+
+    <article class="card" data-nome="abacaxi">
+      <div class="emoji">🍍</div>
+      <h3>Abacaxi</h3>
+      <div class="calorias">50 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitamina C, manganês e água.</p>
+      <p><strong>Benefícios:</strong> ajuda na hidratação e fornece nutrientes importantes para o organismo.</p>
+    </article>
+
+    <article class="card" data-nome="melancia">
+      <div class="emoji">🍉</div>
+      <h3>Melancia</h3>
+      <div class="calorias">30 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> água, vitamina C e licopeno.</p>
+      <p><strong>Benefícios:</strong> contribui para a hidratação e fornece antioxidantes.</p>
+    </article>
+
+    <article class="card" data-nome="manga">
+      <div class="emoji">🥭</div>
+      <h3>Manga</h3>
+      <div class="calorias">60 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitaminas A e C e fibras.</p>
+      <p><strong>Benefícios:</strong> contribui para a saúde da visão, da pele e para o funcionamento intestinal.</p>
+    </article>
+
+    <article class="card" data-nome="pera">
+      <div class="emoji">🍐</div>
+      <h3>Pera</h3>
+      <div class="calorias">57 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> fibras, água e vitamina C.</p>
+      <p><strong>Benefícios:</strong> auxilia a digestão e pode contribuir para a saciedade.</p>
+    </article>
+
+    <article class="card" data-nome="kiwi">
+      <div class="emoji">🥝</div>
+      <h3>Kiwi</h3>
+      <div class="calorias">61 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitamina C, vitamina K e fibras.</p>
+      <p><strong>Benefícios:</strong> contribui para a imunidade e para o funcionamento intestinal.</p>
+    </article>
+
+    <article class="card" data-nome="mamao mamão">
+      <div class="emoji">🍈</div>
+      <h3>Mamão</h3>
+      <div class="calorias">43 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> vitamina C, vitamina A e fibras.</p>
+      <p><strong>Benefícios:</strong> contribui para a saúde intestinal e fornece vitaminas importantes.</p>
+    </article>
+
+    <article class="card" data-nome="abacate">
+      <div class="emoji">🥑</div>
+      <h3>Abacate</h3>
+      <div class="calorias">160 kcal / 100 g</div>
+      <p><strong>Nutrientes:</strong> gorduras monoinsaturadas, fibras e potássio.</p>
+      <p><strong>Benefícios:</strong> fornece gorduras saudáveis e contribui para a saciedade.</p>
+    </article>
+
+  </main>
+
+  <section class="beneficios" id="beneficios">
+    <h2>🌿 Por que comer frutas?</h2>
+    <p>
+      As frutas fornecem vitaminas, minerais, fibras, água e compostos
+      antioxidantes. O consumo variado ajuda a compor uma alimentação
+      equilibrada e contribui para a saúde intestinal e o bem-estar.
+      Prefira frutas variadas e, quando possível, inteiras em vez de sucos.
+    </p>
+  </section>
+
+  <p class="aviso">
+    Valores calóricos aproximados por 100 g de fruta crua.
+    Podem variar conforme a variedade e o grau de maturação.
+    Os benefícios fazem parte de uma alimentação equilibrada.
+  </p>
+
+  <footer>
+    <p>🍏 Frutas & Saúde</p>
+    <p>Conhecimento e saúde em cada fruta!</p>
+    <p>© 2026 - Site educativo sobre alimentação saudável</p>
+  </footer>
+
+  <script>
+    const pesquisa = document.getElementById("pesquisa");
+    const frutas = document.querySelectorAll(".card");
+
+    pesquisa.addEventListener("input", function () {
+      const termo = pesquisa.value
+        .toLocaleLowerCase("pt-BR")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+      frutas.forEach(function (fruta) {
+        const nome = fruta.dataset.nome
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLocaleLowerCase("pt-BR");
+
+        fruta.style.display = nome.includes(termo) ? "" : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
